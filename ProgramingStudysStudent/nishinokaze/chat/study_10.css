@@ -1,0 +1,9 @@
+.crevice-box {
+  margin-top: 20px;
+}
+
+#chat-box {
+  width: 500px;
+  height: 500px;
+  border: solid 1px black;
+}
