@@ -7,13 +7,12 @@
   <title>サンプルアプリ</title>
   
   <!-- フォントの大きさや色などを定義するためのファイルを読み込む -->
-  <link rel="stylesheet" href="./study_1.css">
+  <link rel="stylesheet" href="./study_2.css">
   
   <!-- ページを見ている人が何か押した際に動く処理を定義するためのファイルを読み込む -->
-  <script type="text/javascript" src="./study_1.js"></script>
+  <script type="text/javascript" src="./study_2.js"></script>
 </head>
 <body>
-  <strong>カラーエディタ</strong>
   <form>
     <!-- 文字入力欄 -->
     <div><textarea id="editor" rows="15" cols="50"></textarea></div>
@@ -22,7 +21,16 @@
       文字色設定：<input id="editor-color" type="color" onChange="ColorChange(this.value);">
       <!-- 背景色を選択するためのツールを入れる。 BackColorChange()とは、背景色を変えるための処理が書かれているもの -->
       背景色設定：<input id="editor-back-color" type="color" onChange="BackColorChange(this.value);">
+      
+      <!-- ToDo：入力した内容をパレットへ反映する関数をonClickに反映してみてください♪ -->
+      <input id="refrect-to-pallet" type="button" value="パレットへ反映" onClick="Copy(this.value);"> <!-- 【fukudaコメント】関数の書き方バッチリです！ -->
+    </div>
+
+    <!-- CSSファイルではなく、style属性でスタイルを設定しています -->
+    <div style="margin-top:40px;">
+      <!-- 入力欄と同様のものを用意しています。こちらは読み取り専用にしたいため、readonly属性を付与しています -->
+      <textarea id="pallet" rows="15" cols="50" readonly></textarea>
     </div>
   </form>
 </body>
-</html>
+</html> 
