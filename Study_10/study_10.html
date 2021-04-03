@@ -1,0 +1,33 @@
+<!-- HTML5を利用するための記述 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- 文字コードをUTF-8に設定する -->
+  <meta charset="UTF-8">
+  <!-- WEBアプリのタイトル -->
+  <title>[チャット]サンプルアプリ</title>
+
+  <!-- チャット機能を手助けしてくれるライブラリを読み込む -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+
+  <!-- フォントの大きさや色などを定義するためのファイルを読み込む -->
+  <link rel="stylesheet" href="./study_10.css">
+  
+  <!-- ページを見ている人が何かアクションを起こした際に、動く処理を定義するためのファイルを読み込む -->
+  <script type="text/javascript" src="./study_10.js"></script>
+</head>
+<!-- JavaScriptはHTMLと連携して処理を行うことができます -->
+<!-- 以下のonLoadとはイベントのことで、ページが読み込まれた時に中に書いた処理を行うことができます -->
+<!-- ここでは、jsファイルの中に記載しているShowChat()という関数を実行しています -->
+<body onLoad="ShowChat();">
+  <!-- チャットメッセージ表示用の領域です -->
+  <div id="chat-box" class="crevice-box"></div>
+  <div class="crevice-box">
+    <!-- この入力欄にチャットへ投稿するメッセージを入力します -->
+    投稿内容：<input type="text" id="chat-text">&nbsp;&nbsp;
+    <!-- 投稿ボタンをクリックすることで、UploadChatメソッドが走り、投稿内容入力欄に入力したテキストがチャットへ反映されます -->
+    <!-- 仕組みについては、jsファイルを参照 -->
+    <input type="button" id="chat-send" value="投稿" onClick="UploadChat(document.getElementById('chat-text'));">
+  </div>
+</body>
+</html>

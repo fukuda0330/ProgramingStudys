@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>はじめに[study_10]</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+      .indent-box {
+        text-indent: -1em;
+        padding-left: 1em;
+      }
+      div .code {
+        color: red;
+        background-color: rgb(245, 245, 245);
+        padding: 10px;
+      }
+    </style>
+
+    <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="h1 mt-3 text-center">study_10を始めよう！！</div>
+      
+      <div class="alert alert-primary mt-3" role="alert">
+        【まえがき】
+      </div>
+
+      <div class="alert alert-light mt-3" role="alert">
+        <p>
+          今回からはチャットアプリを作っていこうと思います(^^)<br>
+          <br>
+          普段、プライベートではLINEやSlack、お仕事ではTeamsやChatworkといった<br>
+          チャット機能が付いたサービスを利用していると思います♪<br>
+          <br>
+          今回はそんなチャットアプリを一から作ってみようという内容になります！<br>
+          製作者自身もチャットが好きでして、そのためにタイピングを速くしたと言っても<br>
+          過言ではありません笑<br>
+          <br>
+          ちなみにこのアプリをみんなそれぞれ作ることで、<br>
+          <strong style="color:red;">作った方同士で実際にチャットが楽しめるようになる</strong><br>
+          ので、そこも楽しみにしておいてください♪<br>
+          ※もちろん私も作っているので、参加致します♪<br>
+          <br>
+          なので、プログラミングに慣れてきたらデザイン面（CSS）を勉強して、<br>
+          自分だけのチャットアプリを作ってみるのも楽しいですね♪<br>
+          <br>
+          では、チャットアプリを作ってみんなで交流する場を作ってみましょう♪<br>
+          よろしくお願いします！
+        </p>
+      </div>
+
+
+      <div class="alert alert-danger mt-5" role="alert">
+        【作成するアプリ】
+      </div>
+      
+      <div class="alert alert-light mt-3" role="alert">
+        今回作成するアプリは、標準的なチャット機能を持ったアプリになります！<br>
+        上部の大きな枠：投稿されたチャットメッセージを表示するための領域です<br>
+        投稿内容入力欄：チャットメッセージとしてデータベースへ送る内容を入力するための領域です<br>
+        投稿ボタン：クリックすることで、投稿内容入力欄に入力された内容をデータベースへ送ります<br>
+        <br>
+        書いてあるコードの内容については、今は理解できなくても問題ありません！<br>
+        制作進めていき、振り返った際にきっと様々なことが繋がるはずです！♪<br>
+      </div>
+
+
+      <div class="alert alert-success mt-5" role="alert">
+        【手順】
+      </div>
+
+      <div class="alert alert-light mt-3" role="alert">
+        <p class="indent-box">
+          １、まず、取得してきたProgramingStudysのStudy_10フォルダの中身を確認します<br>
+          <br>
+          Study_10フォルダの中身<br>
+          <br>
+          <div class="border border-dark p-5">
+            ■css<br>
+            こちらは、当「はじめに[study_10]」ページをデザインするための定義ファイルが入っているので、<br>
+            今回は触らなくても大丈夫です<br>
+            <br>
+            ■img<br>
+            こちらは、当「はじめに[study_10]」ページで利用する画像ファイルが入っているので、<br>
+            今回は触らなくても大丈夫です<br>
+            <br>
+            ■js<br>
+            こちらは、当「はじめに[study_10]」ページをデザインするための処理ファイルが入っているので、<br>
+            今回は触らなくても大丈夫です<br>
+            <br>
+            ■study_10.html<br>
+            こちらは、今回作成するチャットアプリの構造部分を記述するためのHTMLファイルになります。<br>
+            <br>
+            ■study_10.js<br>
+            こちらは、今回作成するチャットアプリの実際の処理部分を記述するためのJavaScriptファイルになります。<br>
+            <br>
+            ■study_10.css<br>
+            こちらは、今回作成するチャットアプリの実際のデザイン部分を記述するためのJavaScriptファイルになります。<br>
+            <br>
+            ■はじめに.html<br>
+            今開いて頂いている説明用のHTMLファイルになります。
+          </div>
+        </p>
+
+        <p class="indent-box mt-5">
+          ２、次に制作して頂くためのフォルダを開いてみます<br>
+          <br>
+          制作作業フォルダのパス<br>
+          <br>
+          <div class="border border-dark p-5">
+            <div class="code">ProgramingStudys/ProgramingStudysStudent/"それぞれ方に応じたフォルダ"/chat</div>
+          </div>
+        </p>
+
+        <p class="indent-box mt-5">
+          <span id="section-3">３、「study_10.html」の記載内容を、</span><br>
+          <div class="code">ProgramingStudys/ProgramingStudysStudent/"それぞれ方に応じたフォルダ"/chat/study_10.html</div><br>
+          に模写します<br>
+          ※study_10.htmlをchatフォルダ下に作成し、そこに模写していきます<br>
+          <br>
+          <span class="font-weight-bold text-danger">【重要】自分で記載内容を打ち込むことが大切なので、コピー＆ペーストは今回は無しでお願いしますm(_ _)m</span><br>
+          <br><br>
+          <span id="file-save-operation"></span>模写するイメージ<br>
+          <br>
+          <div class="border border-dark p-5">
+            <img src="./img/discription_14.PNG" style="max-width:90%;">
+          </div>
+        </p>
+
+        <p class="indent-box mt-5">
+          ４、以下に記載の内容で、先ほどの<a href="#section-3">手順３</a>を行います<br>
+          <br>
+          <span class="font-weight-bold text-danger">【重要】自分で記載内容を打ち込むことが大切なので、コピー＆ペーストは今回は無しでお願いしますm(_ _)m</span><br>
+          <br><br>
+          手順３を行う際の内容<br>
+          <br>
+          <div class="border border-dark p-5">
+            ■新たに作成・保存して頂くファイル名は「study_10.css」<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;※作成・保存先フォルダは、前手順で作成・保存して頂いた「study_10.html」と同じフォルダ<br>
+            <br>
+            ■模写の見本にして頂くファイルは、「study_10.css」<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;※前手順と同様に、見本と模写用のソースコードを並べて表示頂くと写しやすいです
+          </div>
+        </p>
+
+        <p class="indent-box mt-5">
+          ５、以下に記載の内容で、先ほどの<a href="#section-3">手順３</a>を行います<br>
+          <br>
+          <span class="font-weight-bold text-danger">【重要】自分で記載内容を打ち込むことが大切なので、コピー＆ペーストは今回は無しでお願いしますm(_ _)m</span><br>
+          <br><br>
+          手順３を行う際の内容<br>
+          <br>
+          <div class="border border-dark p-5">
+            ■新たに作成・保存して頂くファイル名は「study_10.js」<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;※作成・保存先フォルダは、前手順で作成・保存して頂いた「study_10.html」と同じフォルダ<br>
+            <br>
+            ■模写の見本にして頂くファイルは、「study_10.js」<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;※前手順と同様に、見本と模写用のソースコードを並べて表示頂くと写しやすいです
+          </div>
+        </p>
+
+        <p class="indent-box mt-5">
+          ６、作成して頂いた「study_10.html」をダブルクリックする<br>
+          <br>
+          以下のイメージのようなページが表示されれば成功です<br>
+          <br>
+          <div class="border border-dark p-5">
+            ■イメージ<br>
+            <div><img src="./image_1.png"></div>
+          </div>
+        </p>
+
+        <div>
+          以上が手順になります(^^)<br>
+          お疲れ様でした！<br>
+          <br>
+          不明点などありましたら、気軽に話しかけてください♪<br>
+          <a href="mailto:lowtone03@gmail.com" target="_blank">Mail</a><br>
+          <a href="https://twitter.com/kosuke0330" target="_blank">Twitter</a><br>
+          <a href="https://www.facebook.com/profile.php?id=100011605114690" target="_blank">Facebook</a><br>
+          <a href="https://www.instagram.com/f_k0330/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
