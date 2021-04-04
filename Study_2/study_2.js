@@ -1,3 +1,4 @@
+  
 // 文字色を設定するための関数を定義。引数に文字入力欄の文字色を入れるように定義している
 function ColorChange(editorColor) {
   // HTMLファイル内のid="editor"の要素を取得する
@@ -13,14 +14,6 @@ function BackColorChange(editorBackColor) {
   // HTMLファイル内から引数として渡した値（背景色情報）をid="editor"の要素に適用する
   elmEditor.style.backgroundColor = editorBackColor;
 }
-function Copy(refrecttopallet){
-  let pallet = document.getElementById("pallet")
-  pallet.style.data = refrecttopallet
 
-  let elmEditor = document.getElementById("editor");
-  pallet.style.color = elmEditor.style.color;
-  pallet.style.backgroundColor = elmEditor.style.backgroundColor;
-  pallet.value = elmEditor.value
-}
 // ToDo：こちらに、入力した内容をパレットへ反映するための関数を作ってみてください♪
 // ※上２つの関数の定義を参考にしてみてください。名前は何でも大丈夫です
