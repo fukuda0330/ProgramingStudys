@@ -1,0 +1,46 @@
+<!-- HTML5を利用するための記述 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- WEBアプリのタイトル -->
+  <title>サンプル(電卓)アプリ</title>
+  
+  <!-- フォントの大きさや色などを定義するためのファイルを読み込む -->
+  <link rel="stylesheet" href="./study_4.css">
+  
+  <!-- ページを見ている人が何か押した際に動く処理を定義するためのファイルを読み込む -->
+  <script type="text/javascript" src="./study_4.js"></script>
+</head>
+<body>
+  <!-- 電卓用のボックス要素を定義 -->
+  <div id="calcrator">
+    <div class="calcrator-row">
+      <!-- 電卓の数値、演算子などの入力内容、計算結果の表示用ディスプレイ -->
+      <div id="calcrator-display"></div>
+    </div>
+    <div class="calcrator-row">
+      <!-- 全てのボタンの押した内容は「AddCalcrationValue」関数へ渡される -->
+      <!-- ※後々、機能を追加していく過程で押したボタンの種別により、関数を変えてもいいかもしれない -->
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">7</button>
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">8</button>
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">9</button>
+    </div>
+    <div class="calcrator-row">
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">4</button>
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">5</button>
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">6</button>
+    </div>
+    <div class="calcrator-row">
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">1</button>
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">2</button>
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">3</button>
+    </div>
+    <div class="calcrator-row">
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">0</button>
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">+</button>
+      <button class="number-btn" onClick="AddCalcrationValue(this.innerText);">=</button>
+    </div>
+  </div>
+</body>
+</html>

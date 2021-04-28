@@ -1,0 +1,48 @@
+/* 電卓自体のスタイル */
+#calcrator {
+  border: solid 1px black;
+  left: 50%;
+  padding: 20px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  top: 50%;
+  width: 360px;
+}
+
+/* 電卓ディスプレイ部分のスタイル */
+#calcrator-display {
+  border: solid 1px black;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 2.0em;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 340px;
+  text-align: right;
+}
+
+/* 電卓行単位のスタイル */
+.calcrator-row {
+  display: flex;
+  justify-content: space-around;
+}
+/* 電卓行単位のスタイル（最初以外のスタイル） */
+.calcrator-row:not(:first-child) {
+  margin-top: 20px;
+}
+
+/* 数値ボタンのスタイル */
+.number-btn {
+  font-size: 2.0em;
+  height: 100px;
+  width: 100px;
+}
