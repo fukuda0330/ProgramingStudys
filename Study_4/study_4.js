@@ -1,5 +1,6 @@
 // 後々から変わる予定のない値については、constで定数として定義できます
 const PLUS = '+';
+const MINUS = '-'; 
 const EQUAL = '=';
 
 // 関数の外で定義された変数は、全ての関数から扱うことができる
@@ -77,13 +78,28 @@ function AddValue() {
   // 続けて計算を行うため、計算結果を保持する
   HoldNumber(CalcrationResult);
 }
+ //ここからマイナスについて
+function SubtractionValue() {
+  // 左辺と右辺の文字列を数値に変換し、計算した結果を計算結果変数へ入れる
+  CalcrationResult = parseInt(LeftValue)-parseInt(RightValue);
 
+  // 計算結果を電卓のディスプレイへ表示する
+  ShowValueDisplay(CalcrationResult);
+
+  // 計算のために入力し、変数へ保持していた値を削除する
+  ClearCalcration();
+
+  // 続けて計算を行うため、計算結果を保持する
+  HoldNumber(CalcrationResult);
+}
 // 入力された値が演算子（+, -, *, /）かどうかを判定する
 // ※現在は+しか定義していない
 function IsOperator(value) {
   return (value == PLUS);
 }
-
+function IsOperator(value) {
+  return (value == MINUS);
+}
 // 入力された値が＝かどうかを判定する
 function IsEqual(value) {
   return (value == EQUAL);
@@ -91,8 +107,11 @@ function IsEqual(value) {
 
 // 入力された演算子（+, -, *, /）によって判断を行い、適した計算を行う
 function Calcration() {
-  if (CalcrationMode == PLUS) {
+  if (CalcrationMode == PLUS){
     AddValue();
+  }
+ else if (CalcrationMode == MINUS){
+    SubtractionValue();
   }
 }
 
